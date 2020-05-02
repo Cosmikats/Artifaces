@@ -1,13 +1,13 @@
 @font-face {
-    font-family: 'Bayeux';
-    src: url('fonts/bayeux.ttf') format('truetype');
+    font-family: 'Retrocircular';
+    src: url('fonts/Retrocircular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Augusta';
-    src: url('fonts/Augusta.ttf') format('truetype');
+    font-family: 'JAPAN';
+    src: url('fonts/JAPAN.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

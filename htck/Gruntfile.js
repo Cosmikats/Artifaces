@@ -371,6 +371,11 @@ module.exports = function (grunt) {
           cwd: '<%= appConfig.app %>',
           src: '  content/**/*',
           dest: '<%= appConfig.dist %>'
+        }, {
+          expand: true,
+          cwd: '<%= appConfig.app %>',
+          src: '  images/**/*',
+          dest: '<%= appConfig.dist %>'
         }]
       },
       styles: {

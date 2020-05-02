@@ -110,7 +110,7 @@ angular.module('htckApp').factory('hPages', function (hExport, hSave, hElement, 
     })
     .then(function() {
       scope.$parent.exportGIFRunning = true;
-      hExport.exportManyGIF(hPages.pngPages, 'TheLegendaryTaleOfBayeux.gif', 'canvas', hPages.gifWidth, hPages.gifWidth * constants.H / constants.W, hPages.gifInterval, function(){
+      hExport.exportManyGIF(hPages.pngPages, 'TheCosmicArtifacesOfHirayama.gif', 'canvas', hPages.gifWidth, hPages.gifWidth * constants.H / constants.W, hPages.gifInterval, function(){
         scope.$parent.exportGIFRunning = false;
       });
     }, function() {
@@ -118,7 +118,7 @@ angular.module('htckApp').factory('hPages', function (hExport, hSave, hElement, 
     });
     /*
     $timeout(function(){
-      hExport.exportManyGIF(hPages.pngPages, 'TheLegendaryTaleOfBayeux.gif', 'canvas');
+      hExport.exportManyGIF(hPages.pngPages, 'TheCosmicArtifacesOfHirayama.gif', 'canvas');
     },200);*/
   };
 

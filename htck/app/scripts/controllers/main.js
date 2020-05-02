@@ -16,7 +16,7 @@ angular.module('htckApp').controller('MainCtrl', function ($scope, $timeout, $lo
         if($scope.current && $scope.current.ft){
           hElement.handles($scope.current);
         }
-        
+
         $scope.current = newCurrent;
 
         if($scope.current) {
@@ -32,8 +32,8 @@ angular.module('htckApp').controller('MainCtrl', function ($scope, $timeout, $lo
 
       $scope.provisionElement = function(ie) {
         var ft = $scope.paper.freeTransform(ie, {}, hTools.debounce(freeTransformCallback), $scope.constants.DEBOUNCE);
-        
-        // to make this work free_transform plugin must implement range.scale for x AND y 
+
+        // to make this work free_transform plugin must implement range.scale for x AND y
         //ft.setOpts({range: {scale: [$scope.constants.ELEMENT_SCALE_MIN*ft.attrs.size.x, $scope.constants.ELEMENT_SCALE_MAX*ft.attrs.size.y] } });
 
         ie.ft = ft;
@@ -147,12 +147,12 @@ angular.module('htckApp').controller('MainCtrl', function ($scope, $timeout, $lo
       };
 
 
-      //modified by sliders 
+      //modified by sliders
       $scope.elementSetHeight = function(){
         if(!$scope.current) {
           return;
-        }        
-        
+        }
+
         if($scope.current.keepratio) {
           $scope.current.ft.attrs.scale.x = hElement.elementRatio($scope.current) * $scope.current.height;
           $scope.elementChangedWidth($scope.current.ft.attrs.scale.x);
@@ -160,16 +160,16 @@ angular.module('htckApp').controller('MainCtrl', function ($scope, $timeout, $lo
         } else {
           $scope.current.ft.attrs.scale.y = $scope.current.height;
           $scope.current.ft.attrs.ratio = hElement.elementRatio($scope.current);
-        }                       
+        }
         $scope.current.ft.apply();
         hTextEdit.updateCaretPosition();
       };
 
-      //modified by sliders 
+      //modified by sliders
       $scope.elementSetWidth = function(){
         if(!$scope.current) {
           return;
-        }        
+        }
         if($scope.current.keepratio){
           $scope.current.ft.attrs.scale.y = $scope.isFlipped() * $scope.current.width / hElement.elementRatio($scope.current);
           $scope.elementChangedHeight($scope.current.ft.attrs.scale.y);
@@ -177,17 +177,17 @@ angular.module('htckApp').controller('MainCtrl', function ($scope, $timeout, $lo
         } else {
           $scope.current.ft.attrs.scale.x = $scope.isFlipped() * $scope.current.width;
           $scope.current.ft.attrs.ratio = hElement.elementRatio($scope.current);
-        }        
+        }
         $scope.current.ft.apply();
         hTextEdit.updateCaretPosition();
       };
 
-      //modified by handles 
+      //modified by handles
       $scope.elementChangedHeight = function(height){
         hElement.setHeight($scope.current, height);
       };
 
-      //modified by handles 
+      //modified by handles
       $scope.elementChangedWidth = function(width){
         hElement.setWidth($scope.current, width);
       };
@@ -213,7 +213,7 @@ angular.module('htckApp').controller('MainCtrl', function ($scope, $timeout, $lo
         }
         $scope.current.attr({opacity: $scope.current.opacity});
       };
-      
+
       $scope.elementChangeFont = function() {
         if(!$scope.current || $scope.current.type !== 'text') {
           return;
@@ -332,13 +332,13 @@ angular.module('htckApp').controller('MainCtrl', function ($scope, $timeout, $lo
         // Unfocus to remove handles from elements
         unfocus();
         $scope.exportPNGRunning = true;
-        hExport.exportOnePNG(constants.RAPHAEL_PAPER, 'canvas', 'TheGloriousTaleOfBayeux.png', $scope.paper, function(){
+        hExport.exportOnePNG(constants.RAPHAEL_PAPER, 'canvas', 'TheCosmicArtifacesOfHirayama.png', $scope.paper, function(){
           $scope.exportPNGRunning = false;
         });
       };
 
       $scope.exportAll = function(){
-        hExport.exportManyPNG($scope, constants.RAPHAEL_PAPER, 'canvas', 'TheGloriousTaleOfBayeux');
+        hExport.exportManyPNG($scope, constants.RAPHAEL_PAPER, 'canvas', 'TheCosmicArtifacesOfHirayama');
       };
 
       $scope.setFontColor = function(color) {
@@ -355,7 +355,7 @@ angular.module('htckApp').controller('MainCtrl', function ($scope, $timeout, $lo
 
       $scope.save = function(){
         unfocus();
-        hSave.save(hPages.pages, 'TheLegendaryManuscript.htck');
+        hSave.save(hPages.pages, 'TheCosmicArtifacesOfHirayama.htck');
       };
 
       $scope.startImport = function(){
@@ -418,7 +418,7 @@ angular.module('htckApp').controller('MainCtrl', function ($scope, $timeout, $lo
       function init(){
         $scope.font = (constants.fonts && constants.fonts.length) ? constants.fonts[0] : undefined;
         $scope.fontColor = (constants.colors && constants.colors.length) ? constants.colors[0] : constants.TEXT_DEFAULT_FONT_COLOR;
-        
+
         $scope.headerStyle = {};
         if($scope.font){
           $scope.headerStyle = {

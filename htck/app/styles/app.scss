@@ -8,6 +8,7 @@
 #title {
   padding-top: 50px;
   padding-bottom: 50px;
+  color: white;
 }
 
 #content {
@@ -57,7 +58,7 @@ md-tabs-wrapper {
 }
 
 // Hack for google chrome
-@media screen and (-webkit-min-device-pixel-ratio:0) { 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
   .itembank-wrapper {
     min-height:$contentMinHeightGTLD;
   }
@@ -123,7 +124,7 @@ md-tabs-wrapper {
 }
 
 #toolbar-element {
-  color: white;
+  color: black;
 }
 
 #toolbar-general, #toolbar-pages {
@@ -273,7 +274,7 @@ md-tabs-wrapper {
 }
 
 .md-icon-button:hover{
-  color: rgba(0,0,0, 0.3);  
+  color: rgba(0,0,0, 0.3);
 }
 
 .dialog{
@@ -376,7 +377,7 @@ md-tabs-wrapper {
     margin-left: 15px;
 
     background: transparent;
-    color: #FFC600;
+    color: black;
     border: solid 1px;
     border-radius: 3px;
     text-align: center;

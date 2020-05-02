@@ -19,6 +19,33 @@ angular.module('htckApp').factory('hExport', function (hTools) {
     canvg(document.getElementById(canvasId), svgStr, {
       renderCallback: function() {
         var canvas = document.getElementById(canvasId);
+        var ctx = canvas.getContext('2d');
+
+        var text = 'Based on Yokohama City Hall\'s public library\'s series of Hirayama fireworks catalog';
+        var x = 10, y = canvas.height - 10;
+
+        var pixelData = ctx.getImageData(x, canvas.height - 11, canvas.width - 11, 10).data;
+
+        var count = 0;
+        var total = 0;
+        for (var idx = 0; idx < pixelData.length; idx+=4) {
+            total += (pixelData[idx] + pixelData[idx + 1] + pixelData[idx + 2]);
+            count+=3;
+        }
+        var strokeColor = 'black';
+        var fillColor = 'white';
+        if (170 < (total/count)) {
+            strokeColor = 'white';
+            fillColor = 'black';
+        }
+
+        ctx.font = '13px Sans-serif';
+        ctx.strokeStyle = strokeColor;
+        ctx.lineWidth = 1;
+        ctx.strokeText(text, x, y);
+        ctx.fillStyle = fillColor;
+        ctx.fillText(text, x, y);
+
         callback(canvas);
       }
     });

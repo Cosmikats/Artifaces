@@ -1,12 +1,13 @@
-# Historic Tale Construction Kit - Bayeux
+# Historic Tale Construction Kit - Artifaces
 
-[Check out the online demo!](http://htck.github.io/bayeux)
+[Check out the online demo!](http://artifaces.leschatscosmiques.net)
 
-> Craft thy own Bayeux Tapestry  
-> Slay mischievous beasts  
-> Rule the kingdom
+> Craft thy own Japanese 19th century fireworks 
+> Pop colors and zwims and zamms  
+> Explode 
 
-Two German students originally wrote the _Historic Tale Construction Kit_, with Flash. Sadly, their work isn't available anymore, only [remembered](http://netzspannung.org/cat/servlet/CatServlet?cmd=document&subCommand=show&forward=%2Fnetzkollektor%2Foutput%2Fproject.xml&entryId=84868). This new application is a tribute, but also an attempt to revive the old [medieval meme](http://knowyourmeme.com/memes/medieval-macros-bayeux-tapestry-parodies), with code and availability that won't get lost.
+Yokohama city's public library hall released dematerialized versions of old catalogues of firework (www.city.yokohama.lg.jp/kyoiku/library/digitalarchive/hirayama.html).
+We could not resist the urge of detouring them to offer everyone the beautiful experience of Japanese fireworkks, with a little help from the team that conceived the generator of medieval Bayeux tapestries.
 
 ## Features
 This brand new Historic Tale Construction Kit allows you to
